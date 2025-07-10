@@ -16,8 +16,12 @@ Page({
   fetchTrending(lang = 'All') {
     this.setData({ loading: true });
     const that = this;
+    let url = 'https://trend.doforce.dpdns.org?since=weekly';
+    if (lang && lang !== 'All') {
+      url += `&language=${lang}`;
+    }
     wx.request({
-      url: lang && lang !== 'All' ? `https://ghapi.huchen.dev/repositories?language=${lang}` : 'https://ghapi.huchen.dev/repositories',
+      url,
       success(res) {
         that.setData({ repos: res.data, loading: false });
       },
