@@ -55,4 +55,9 @@ Page({
         }
         return data;
     },
+    goToGithubHot() {
+      wx.navigateTo({
+        url: '/pages/github/index',
+      });
+    },
 });

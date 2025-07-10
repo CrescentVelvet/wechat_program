@@ -1,0 +1,27 @@
+.container {
+  padding: 20rpx;
+}
+.picker {
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+}
+.repo-item {
+  margin-bottom: 30rpx;
+  padding: 20rpx;
+  background: #f7f7f7;
+  border-radius: 12rpx;
+}
+.repo-title {
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+}
+.repo-desc {
+  color: #666;
+  font-size: 28rpx;
+  margin-bottom: 10rpx;
+}
+.repo-info {
+  color: #888;
+  font-size: 24rpx;
+} 

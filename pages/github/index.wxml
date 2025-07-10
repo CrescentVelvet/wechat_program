@@ -1,0 +1,17 @@
+<view class="container">
+  <picker mode="selector" range="{{languages}}" bindchange="onLangChange">
+    <view class="picker">当前语言：{{currentLang}}</view>
+  </picker>
+  <view wx:if="{{loading}}">加载中...</view>
+  <block wx:for="{{repos}}" wx:key="url">
+    <view class="repo-item">
+      <view class="repo-title">{{item.author}} / {{item.name}}</view>
+      <view class="repo-desc">{{item.description}}</view>
+      <view class="repo-info">
+        <text>⭐ {{item.stars}}</text>
+        <text> | {{item.language}}</text>
+        <text> | <navigator url="{{item.url}}" open-type="navigate">查看</navigator></text>
+      </view>
+    </view>
+  </block>
+</view> 
